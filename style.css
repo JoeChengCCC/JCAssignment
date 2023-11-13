@@ -7,6 +7,8 @@
     font-family:sans-serif cursive;
 }
 
+
+
 :root{
     --color-pagebackground: #00334e;
     --color-pagetext: #e8e8e8;
@@ -18,7 +20,7 @@
     
     --color-darkblue: #00334e;
     --color-black: #000;
-    --color-white: #000;
+    --color-white: #fff;
     --color-greywhite: #e8e8e8;
     --color-gray: #808080;
     --color-orange:#ff7f0e;
@@ -35,16 +37,13 @@
     --color-navyblue:#000080;
     --color-brightgreen:#00ff00;
     --color-brightmagenta:#ff00ff;
-    
 }
-
 body{
     background-color: var(--color-pagebackground);
     font-size: 1.1rem;
     color: var(--color-pagetext);
     transition: all .4s ease-in-out;
 }
-
 a{
     /* display:inline-block;*/
     text-decoration:none;
@@ -67,7 +66,6 @@ AllHeader {
     display: flex;
     justify-content: space-between;
 }
-
 AllFooter{
     text-align: center;
     padding: 10px 10px;
@@ -77,19 +75,20 @@ AllFooter{
     background-color:var(--color-pagebackground);
     color:var(--color-footertext);
 }
-
 #AllWrap{
     margin-top: 1px;
     padding:0; 
     background: var(--color-pagebackground);
     text-decoration: none;
 }
-
 #PicLogoLine{
     padding: 50px 5px 10px 5px;
     background-image: url(Pic_Logo.svg);
     background-repeat: repeat-x;
   }
+
+
+
 /******************/
 /* Navigation Bar */
 /******************/
@@ -102,17 +101,21 @@ AllFooter{
     background: var(--color-pagebackground);
     display:inline-flex;
 }
-
 #Nav a, img {
     vertical-align: middle;
     font-family:sans-serif;
     padding:10px 20px 0px 20px;
     font-size:20px;
-    color: var(--color--navtext);
+    color: var(--color-navtext);
 }
-#Nav .NavActive, a:hover{
+#Nav a:hover{
+    color: var(--color-navtext-hilite);
+    text-decoration: underline;
+}
+#Nav .NavActive {
     color: var(--color-navtext-hilite);
 }
+
 
 
 /**************/
@@ -140,11 +143,15 @@ AllFooter{
     font-weight:bolder;
     font-size: 45px;
 }
+#HomeSection1BigText :hover{
+    font-size: 75px;
+}
 #HomeSection1SmallText{
     text-align: left;
     padding: 10px 50px 10px 50px;
     font-size: 30px;
 }
+
 
 
 /***************/
@@ -161,7 +168,6 @@ AllFooter{
     background-image: url(Pic_flower.gif);
     background-size: 20% 100%;
   }
-
 #AboutSection1SmallText{
     padding: 20px 100px 0px 100px;
     color: var(--color-greywhite);
@@ -233,6 +239,7 @@ span:nth-child(10){
 }
 
 
+
 /******************/
 /* Page - Gallery */
 /******************/
@@ -288,7 +295,6 @@ span:nth-child(10){
       text-shadow: 6px 6px var(--color-brightmagenta);
       }
 }
-
 #Shine:nth-child(1){
     animation-delay:0s;
 }
@@ -309,28 +315,29 @@ span:nth-child(10){
 }
     
 
-/******************/
-/* Page - Contact */
-/******************/
 
+/***************************/
+/* Page - Become an Author */
+/***************************/
 
 .card {
   margin-left: 10%;
   align-items: center;
   width: 80%;
   padding: 25px 100px 10px 100px;
-  border: 10px solid var(--color-pagetext);
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+  border: 10px solid var(--color-skydullblue);
+  box-shadow: 10px 10px 0 var(--color-form-bordershade);
   border-radius: 90px;
   position: relative;
   color: var(--color-form-border);
   font-size: 30px;
-  text-transform: uppercase;
 }
 .FormName{
+font-family: cursive;
 font-size: 30px;
 font-weight: bolder;
-text-align: center
+text-align: center;
+text-decoration: underline
 }
 .card .row {
   position: relative;
@@ -340,21 +347,18 @@ text-align: center
   grid-template-columns: repeat(auto-fit,minmax(40%, 1fr));
   grid-gap: 10px;
 }
-
 .card .row .col {
   position: relative;
   width: 100%;
   margin: 20px 20px 20px 0;
   transition: 0.5s;
 }
-
 .card .row .form-group {
   position: relative;
   width: 100%;
   height: 50px;
   color: var(--color-form-bordershade);
 }
-
 .card .row .form-group input,
 .card .row .form-group textarea {
   position: absolute;
@@ -362,46 +366,47 @@ text-align: center
   height: 100%;
   background: transparent;
   outline: none;
-  font-size: 24px;
+  font-family: cursive;
+  font-size: 18px;
   padding: 10px 0 10px 20px;
-  border: 5px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+  border: 5px solid var(--color-skydullblue);
+  box-shadow: 5px 5px 0 var(--color-form-bordershade);
   color: #ffffff;
   border-radius: 50px;
 }
-
 .card .row .form-group label {
-  line-height: 40px;
+  line-height: 30px;
   color: #ffffff;
-  font-size: 24px;
-  margin: 0 0 0 30px;
+  font-family: cursive;
+  font-size: 20px;
+  margin: 0 0 0 20px;
   display: block;
   pointer-events: none;
 }
-
 .row .col:nth-child(6) {
   margin-top: 64px;
 }
-
 .card .row .form-group input:focus,
 .card .row .form-group textarea:focus {
   border: 5px solid #ffffff;
   transition: all 0.5s;
 }
-
 .card .row input[type="submit"] {
-  border: 5px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
-  padding: 10px;
+  margin: 0 0 0 50px;
+  border: 5px solid var(--color-skydullblue);
+  box-shadow: 5px 5px 0 var(--color-form-bordershade);
+  padding: 5px 0px 5px 20px;
   height: 100%;
   width: 50%;
   cursor: pointer;
   outline: none;
   background: transparent;
   text-transform: uppercase;
+  text-align:center;
   color: #ffffff;
-  line-height: 40px;
-  font-size: 24px;
+  line-height: 35px;
+  font-family:cursive;
+  font-size: 25px;
   font-weight: 700;
   border-radius: 45px;
   transition: all 0.4s;
@@ -412,16 +417,12 @@ text-align: center
   color: #ffffff;
   transition: all 0.4s;
 }
-
 @media screen and (max-width: 900px) {
   .card .row {
     grid-template-columns: repeat(auto-fit,minmax(70%, 1fr));
   } 
   .card {
     padding: 20px;
-  } 
-  .card h2 {
-    font-size: 34px;
   } 
   .card .row input[type="submit"] {
     width: 100%;
@@ -434,19 +435,16 @@ text-align: center
 /* Page - Video */
 /****************/
 
-
 .Video {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 2px;
 }
-
 #Video{
     width:20%;
     height:20%;
 }
-
 #Videoitem--1{
     grid-column-start:30;
     grid-column-end:20;    
@@ -454,7 +452,6 @@ text-align: center
     grid-row-end:15;
    
 }
-
 .Videoitem--2{
     grid-column-start:5;
     grid-column-end:10;    

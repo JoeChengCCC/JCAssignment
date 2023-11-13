@@ -29,36 +29,52 @@
   <div class="row">
     <div class="col">
       <div class="form-group">
-        <label>First Name</label>
-        <input type="text">
+        <label>Name/ Avatar (*required)</label>
+        <input type="text" id="room-owner" name="room-owner" 
+        placeholder="Specify (within 10 chars)" required>
       </div>
     </div>
 
     <div class="col">
       <div class="form-group">
-        <label>Surname</label>
-        <input type="text">
+        <label>Email (*required)</label>
+        <input type="email" id="room-email" name="room-email" 
+        placeholder="Specify a valid email" required>
+        
       </div>
     </div>
 
     <div class="col">
       <div class="form-group">
-        <label>Email</label>
-        <input type="text">
+        <label>Room Name (*required) </label>
+        <input type="text" id="room-name" name="room-name" placeholder="Specify (within 20 chars)" required>
       </div>
     </div>
 
     <div class="col">
       <div class="form-group">
-        <label>Phone</label>
-        <input type="text">
-      </div>
+        <label>Background Color (optional)</label>
+          <datalist id="room-color-list" name="room-color-list">
+                <option value="#FFFFFF White">
+                <option value="#FFFF00 Yellow">
+                <option value="#FF0000 Red">
+                <option value="#00FF00 Lime">
+                <option value="#FF00FF Magenta">
+                <option value="#0000FF Blue">
+                <option value="#800000 Maroon">
+                <option value="#808080 Gray">
+                <option value="#800080 Purple">
+                <option value="#000000 Black">
+                <option value="others, please specify">
+            </datalist>
+            <input type="search" list="room-color-list" id="room-color" name="room-color" placeholder="Specify/Select from list" required>
+        </div>
     </div>
 
     <div class="col">
-      <div class="form-group">
-        <label>Message</label>
-        <textarea></textarea>
+      <div class="form-group" >
+        <label>Additional request (optional)</label>
+        <textarea placeholder="Input your Comment etc"></textarea>
       </div>
     </div>
 
@@ -76,6 +92,7 @@
         </div>
         </AllFooter>
         </div>
+    
 </body>
     
 </html>

@@ -37,21 +37,54 @@
     --color-navyblue:#000080;
     --color-brightgreen:#00ff00;
     --color-brightmagenta:#ff00ff;
+    
+    --mfont-desktop:16px;
+    --mfont-tablet:14px;
+    --mfont-mobile:12px;
+    --mfont:20px;
+    --xxxxlfont:calc(var(--mfont) + 15px);
+    --xxxxxxlfont:calc(var(--mfont) + 25px);
+    --xxlfont:calc(var(--mfont) + 5px);
+    --xxsfont:calc(var(--mfont) - 5px);
 }
 body{
     background-color: var(--color-pagebackground);
-    font-size: 1.1rem;
     color: var(--color-pagetext);
-    transition: all .4s ease-in-out;
+    transition: font-size .25s ease-in-out; 
+    font-size:var(--mfont);
 }
 a{
-    /* display:inline-block;*/
     text-decoration:none;
     color:inherit;
     font-family: inherit;
 }
 
+/* for desktop device */
+@media only screen and (min-width:992px) {
+    body{
+        font-size:var(--mfont-desktop);
+        width:80%;
+        margin: auto;
+    }
+}
 
+/* for tablet device */
+@media only screen and (min-width:768px) and max-width:991ppx) {
+    body{
+        font-size:var(--mfont-tablet);
+        width:90%;
+        margin: auto;
+    }
+}
+
+/* for mobile device */
+@media only screen and (max-width:767px) {
+    body{
+        font-size:var(--mfont-mobile);
+        width:100%;
+        margin: 0;
+    }
+}
 
 /***********************************/
 /* ALL Pages' Header, Footer, Wrap */
@@ -59,10 +92,10 @@ a{
 
 AllHeader {
     background: var(--color-pagebackground);
-    overflow:hidden;
+    overflow:auto;
     width:100%;
-    height:9vh;
-    padding: 10px 5px;
+    height:30hmin;
+    padding: 30px 0px;
     display: flex;
     justify-content: space-between;
 }
@@ -82,7 +115,7 @@ AllFooter{
     text-decoration: none;
 }
 #PicLogoLine{
-    padding: 50px 5px 10px 5px;
+    padding: 30px 5px 10px 5px;
     background-image: url(Pic_Logo.svg);
     background-repeat: repeat-x;
   }
@@ -105,7 +138,7 @@ AllFooter{
     vertical-align: middle;
     font-family:sans-serif;
     padding:10px 20px 0px 20px;
-    font-size:20px;
+    font-size:var(--mfont);
     color: var(--color-navtext);
 }
 #Nav a:hover{
@@ -143,10 +176,10 @@ AllFooter{
     padding: 10px 10px 10px 10px;
     text-align: center;
     font-weight:bolder;
-    font-size: 8vmin;
+    font-size: var(--xxxxlfont);
 }
 #HomeSection1BigText:hover{
-    font-size: 12vmin;
+    font-size: var(--xxxxxxlfont);
     transition-duration: 1s;
     background:url(Pic_Home_FlashyColor.gif);
     -webkit-background-clip: text;
@@ -169,20 +202,18 @@ AllFooter{
 /***************/
 
 #AboutWrap{
-
     font-family: cursive;
     background-image: linear-gradient(red, white, red, orange,lightblue, lightgreen, silver, turquoise, gold, magenta, pink, limegreen, lightcoral, yellow, beige, cyan, orangered, brown, gray, indigo, darkblue, plum, olive, goldenrod, maroon, chartreuse,darkgreen, ivory, pink, purple, violet, black, #00334e, #00334e, #00334e); 
 }
 #AboutPicFlower{
-    padding: 250px 50px 50px 50px;
+    padding: 50px 50px 50px 50px;
     background-image: url(Pic_About_flower.gif);
     background-size: 20% 100%;
   }
 #AboutSection1SmallText{
-    padding: 20px 100px 20px 100px;
-    color: var(--color-yellow);
+    padding: 10px 20% 10px 20%;
     text-shadow: 6px 6px var(--color-yellow);
-    font-size: 35px;
+    font-size: 4vmin;
     font-weight:bold;
     background:url(Pic_About_Flashy4.gif);
     -webkit-background-clip: text;
@@ -192,7 +223,7 @@ AllFooter{
     padding: 10px 20px 10px 20px;
     color: var(--color-greywhite);
     font-weight:bolder;
-    font-size: 85px;
+    font-size: 6vmin;
     text-align: center;
     position: relative;
     transform: translate(0%, -5%);
@@ -201,12 +232,12 @@ AllFooter{
 
 span{
     display:inline-block;
-    font-weight: bolder;
+    font-weight: 800;
     animation: TextAboutUs 6s linear infinite;
 }
 
 @keyframes TextAboutUs {
-    10%   { color:var(--color-skyblue);
+    10%  { color:var(--color-skyblue);
         transform: translateY(0px);}
     30%  {color:var(--color-dullgreen);
         transform: translateY(10px);}
@@ -263,7 +294,7 @@ span:nth-child(10){
     display:inline-flex;
 }
 #GallerySectionRoomList{
-    width:20vw;
+    width:15%;
 }
 #GalleryRoomList{
     padding-left: 5%;
@@ -275,13 +306,13 @@ span:nth-child(10){
 #GallerySectionBox{
     display: flex; 
     flex-flow:no-wrap;
-    width:40vw;
+    width:35%;
     height:100%;
 }
 
 #GallerySectionMagicStickPosition{
     position: absolute;
-    left:20%;
+    left:25%;
     width:10%;
     bottom:25%;
     height:20%;
@@ -296,7 +327,7 @@ span:nth-child(10){
 #GallerySectionBigTextPosition{
     position: absolute;
     padding-left:45%;
-    left:1%;
+    left:5%;
     width:20%;
     bottom:55%;
     height:30%;
@@ -304,7 +335,7 @@ span:nth-child(10){
 }
 
 #GallerySectionBigText{ 
-    font-size: 12vmin;
+    font-size: 10vmin;
     font-family: cursive;
     text-align:center;
     color: var(--color-red);
@@ -367,7 +398,7 @@ span:nth-child(10){
 }
 .FormName{
 font-family: cursive;
-font-size: 30px;
+font-size: var(--xxlfont);
 font-weight: bolder;
 text-align: center;
 text-decoration: underline
@@ -400,7 +431,7 @@ text-decoration: underline
   background: transparent;
   outline: none;
   font-family: cursive;
-  font-size: 18px;
+  font-size: var(--xxsfont);
   padding: 10px 0 10px 20px;
   border: 5px solid var(--color-skydullblue);
   box-shadow: 5px 5px 0 var(--color-form-bordershade);
@@ -411,7 +442,7 @@ text-decoration: underline
   line-height: 30px;
   color: #ffffff;
   font-family: cursive;
-  font-size: 20px;
+  font-size: var(--xxsfont);
   margin: 0 0 0 20px;
   display: block;
   pointer-events: none;
@@ -425,10 +456,10 @@ text-decoration: underline
   transition: all 0.5s;
 }
 .card .row input[type="submit"] {
-  margin: 0 0 0 50px;
+  margin: 0;
   border: 5px solid var(--color-skydullblue);
   box-shadow: 5px 5px 0 var(--color-form-bordershade);
-  padding: 5px 0px 5px 20px;
+  padding:0;
   height: 100%;
   width: 50%;
   cursor: pointer;
@@ -436,10 +467,10 @@ text-decoration: underline
   background: transparent;
   text-transform: uppercase;
   text-align:center;
-  color: #ffffff;
-  line-height: 35px;
+  color: var(--color-greywhite);
+  line-height: 5vmin;
   font-family:cursive;
-  font-size: 25px;
+  font-size: var(--xxsfont);
   font-weight: 700;
   border-radius: 45px;
   transition: all 0.4s;

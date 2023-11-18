@@ -314,8 +314,8 @@ span:nth-child(10){
     position: absolute;
     left:25%;
     width:10%;
-    bottom:25%;
-    height:20%;
+    bottom:35%;
+    height:25%;
     transform:translateY(-50%);
 }
 #GallerySection2{

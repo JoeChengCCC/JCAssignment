@@ -133,6 +133,7 @@ AllFooter{
     z-index: 999;
     background: var(--color-pagebackground);
     display:inline-flex;
+    overflow:scroll;
 }
 #Nav a, img {
     vertical-align: middle;

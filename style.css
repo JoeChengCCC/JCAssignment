@@ -499,42 +499,14 @@ text-decoration: underline
 /* Page - Video */
 /****************/
 
-#Video {
-    display: grid;
-    margin-left:10%;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-gap: 20px;
-    
-}
-#VideoClip {
-    display:flex;
+#video-container {
+    display: flex;
     flex-direction:column;
-    padding:10px;
-    width:30%;
-    height:100%;
-    background-color:var(--color-skydullblue);
-    border-radius:5px;
 }
 
-#InsideVideoClip{
-    color:aqua;
-}
-#Videoitem--1{
-    grid-column-start:1
-    grid-column-end:span 1;    
-    grid-row-start:1;    
-    grid-row-end:span 2;
-   
-}
-.Videoitem--2{
-    grid-column-start:2;
-    grid-column-end:span 1;    
-    grid-row-start:2;    
-    grid-row-end:span 2;
-    height:30px; width:5px;
-}
-#Normal100{
-    width:100%;
-    height:100%;
+#iframe{
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }

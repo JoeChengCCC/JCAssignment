@@ -46,17 +46,21 @@
     --xxxxxxlfont:calc(var(--mfont) + 25px);
     --xxlfont:calc(var(--mfont) + 5px);
     --xxsfont:calc(var(--mfont) - 5px);
+    --aspect-ratio: 1 / 1;
 }
 body{
     background-color: var(--color-pagebackground);
     color: var(--color-pagetext);
     transition: font-size .25s ease-in-out; 
     font-size:var(--mfont);
+    max-width:100%;
+    object-fit: cover;
 }
 a{
     text-decoration:none;
     color:inherit;
     font-family: inherit;
+    
 }
 
 /* for desktop device */
@@ -132,7 +136,7 @@ AllFooter{
     width: 100%;
     z-index: 999;
     background: var(--color-pagebackground);
-    display:inline-flex;
+    display:flex;
     overflow:scroll;
 }
 #Nav a, img {
